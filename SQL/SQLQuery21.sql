@@ -1,0 +1,5 @@
+GRANT ALTER any Database to Murray
+
+GRANT CONTROL SERVER TO Murray
+
+GRANT CONTROL SERVER TO Sara
