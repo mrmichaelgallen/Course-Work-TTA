@@ -1,0 +1,7 @@
+SELECT DATEFROMPARTS(2013, 5, 2)
+
+USE dbBasics
+GO 
+
+SELECT *
+FROM vSales
