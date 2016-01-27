@@ -1,6 +1,9 @@
-### Course Work for Python
+### Python
 ***
 
-These are drills that I did for course work. They are step by step drills and are not my original works. 
+This is a collection of my course work, both following along drill work and some of my own solutions.
 
-If you would like to see my own original coded works, check out my [Portfolio](https://github.com/mrmichaelgallen/Portfolio-for-MichaelAllen)
+If you would like to see only my own solutions to software challenges, please check out my [Portfolio](https://github.com/mrmichaelgallen/Portfolio-for-MichaelAllen) of my work with readme files detailing how I solved each one.
+
+Michael Allen - [LinkedIn](https://www.linkedin.com/in/mrmichaelgallen) and [Blog](http://mrmichaelgallen.com/)
+
