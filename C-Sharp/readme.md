@@ -7,5 +7,5 @@ If you would like to see only my own solutions to software challenges, please ch
 
 Michael Allen
 * [LinkedIn](https://www.linkedin.com/in/mrmichaelgallen)
-* [blog](http://mrmichaelgallen.com/)
+* [Blog](http://mrmichaelgallen.com/)
 
