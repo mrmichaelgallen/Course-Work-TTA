@@ -46,6 +46,17 @@ class Frame(wx.Frame):
         self.listCtrl.InsertColumn(3, "Age")
         self.listCtrl.InsertColumn(4, "Occupation")
 
+        # Add data to the list control
+        self.fillListCtrl()
+
+        # Setup a delete button
+        deleteBtn = wx. Button(panel, label="Delete", pos=(640, 450))
+
+        # Bind the delete button to OnDelete function
+        deleteBtn.Bind(wx.EVT_BUTTON, self.onDelete)
+
+        # Run onSelect function when item is selected
+        self.listCtrl.Bind(wx.EVT_LIST_ITEM_SELECTED, self.onSelect)
 
     def addCharacter(self, event):
         name = self.sName.GetValue()
@@ -82,14 +93,27 @@ class Frame(wx.Frame):
         # Get data from the database
         allData = PythonDrill_PartFour_GUIprogramDB.viewAll()
 
+        # Delete old data before adding new data
+        self.listCtrl.DeleteAllItems()
+
         # Append data to the table
         for row in allData:
             # Loop through and append data
             self.listCtrl.Append(row)
+
+    def onSelect(self, event):
+        # Get the id of the selected row
+        self.selectedID = event.GetText()
+
+    def onDelete(self, event):
+        # Delete the character
+        PythonDrill_PartFour_GUIprogramDB.deleteCharacter(self.selectedID)
+
+        # Refresh the table
+        self.fillListCtrl()
     
 app = wx.App()
 frame = Frame("Python GUI")
 frame.Show()
 app.MainLoop()
 
-# Adding comment for syncing to Github

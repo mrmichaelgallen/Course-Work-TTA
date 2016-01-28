@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8 ">
+  <meta name="desciption" content="User Login">
+  <title>Michael's Webpage - User Login</title>
+  <link rel="stylesheet" type="text/css" href="styles/login.css">
+  <style>
+.demo {
+  border-top: 100px solid #ccc;
+  height: 300px;
+  font-family: sans-serif;
+}
+@keyframes grow {
+    0% { font-size: 0 }
+    100% { font-size: 40px }
+}
+@-webkit-keyframes grow {
+    0% { font-size: 0 }
+    100% { font-size: 40px }
+}
+.demo:hover .grows {
+    animation-name: grow;
+    animation-duration: 3s;
+    -webkit-animation-name: grow;
+    -webkit-animation-duration: 3s;
+}
+.demo:hover .growsandstays {
+    animation-name: grow;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: grow;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-fill-mode: forwards;
+}
+  </style>
+</head>
+<header></header>
+
+<body>
+<section>
+<p>Move your mouse over the grey box</p>
+<div class="demo">
+  <div class="grows">This just grows</div>
+  <div class="growsandstays">This grows and stays big</div>
+</div>
+</section>
+<footer></footer>
+
+</body>
+
+</html>
