@@ -1,13 +1,7 @@
 ### Channel 9 with Bob Tabor
 ***
 
-### Objective
-
-
-### Steps Taken
-
-
-### Results
+Course work on Channel 9 with Bob Tabor on JavaScript. Not my own original work. Great learning videos.
 
 
 
