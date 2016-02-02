@@ -296,4 +296,75 @@
 ## Selecting code and values with conditionals
 ##
 
+## Conditional Executions (traditional)
+# def main():
+#     a, b = 1, 1
+#     if a < b:
+#         print("a is less than b")
+#     elif a > b:
+#         print("a is greater than b")
+#     else:
+#         print("a is equal b")
+#
+# if __name__ == "__main__": main()
 
+## Conditional Expressions
+# def main():
+#     a, b = 1, 1
+#     s = "Less than" if a < b else "not less than"
+#     print(s)
+#
+# if __name__ == "__main__": main()
+
+##
+## Creating and using functions
+##
+
+# def main():
+#     func(1)
+#     func(5)
+#     func(7)
+#
+# def func(a):
+#     for i in range(a, 10):
+#         print(i, end=' ')
+#     print() # prints an empty line
+#
+# if __name__ == "__main__": main()
+#
+
+
+##
+## Creating and using objects
+##
+
+# class Egg:
+#     def __init__(self, kind = "fried"):
+#         self.kind = kind
+#
+#     def whatKind(self):
+#         return self.kind
+#
+#
+# def main():
+#     fried = Egg()
+#     scrambled = Egg('scrambled')
+#     print(fried.whatKind())
+#     # print(scrambled.whatKind())
+#
+#
+# if __name__ == "__main__": main()
+
+##
+## 5. Variables, Objects, and Values.
+##
+
+
+
+### Template
+
+# def main():
+#     print("This is the template")
+#
+#
+# if __name__ == "__main__": main()
