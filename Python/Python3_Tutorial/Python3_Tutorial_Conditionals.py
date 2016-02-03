@@ -359,6 +359,85 @@
 ## 5. Variables, Objects, and Values.
 ##
 
+##
+## Understanding variables and objects in Python
+##
+
+# Everything in Python is an object. Every object has a ID, Type and a value
+#
+# X = 42 the 42 is the value
+# x
+# 42
+# id(x)
+# a unique number that is as an Identifer
+# type(x)
+# <class 'int'>
+
+##
+## Distingquishing mutable and immutable objects
+##
+
+# mutable objects can change
+#
+# immutable objects can not change (the distinction is found by the id(x) which provides a unique number )
+
+##
+## Using numbers
+##
+
+# def main():
+#     num = 42 // 5 # this is integer division
+#     print(num)
+#     print(type(num), num)
+
+# if __name__ == "__main__": main()
+
+
+##
+## Using strings (They are immutable objects)
+##
+
+# def main():
+#     n = 42
+#     # s = r'This is a\n string!' # The r before the string tells the system to display it "as is"
+#     # s = "This is a {} string!".format(n) # Python 3 way of doing it
+#     # s = "This is a %s string!" % n # This is the Python 2 way of doing the line above DONT USE, it will be deprecated
+#     # s = ''' this is a string ''' # Allows to have a string that spans several lines like example below
+#     s = '''\      # the \ escapes the extra line
+#     This is a string
+#     line after line
+#     of text and more
+#     text.
+#     '''
+#     print(s)
+#
+#
+# if __name__ == "__main__": main()
+
+##
+## Aggregating values with lists and tuples
+##
+
+# def main():
+#     # x = (1, 2, 3) # Tuple is an immutable object (cant be changed, must be fixed)
+#     # x = [1, 2, 3]    # It is mutable object (can append or insert to list)
+#     # x.append(5)
+#     # x.insert(2, 7)
+#     # x = 'string'
+#     # print(type(x), x[2:4]) # slicing
+#     x = 'String'
+#     for i in x:
+#         print(i)
+#
+#
+#
+# if __name__ == "__main__": main()
+
+
+##
+## Aggregating values with lists and tuples
+##
+
 
 
 ### Template
