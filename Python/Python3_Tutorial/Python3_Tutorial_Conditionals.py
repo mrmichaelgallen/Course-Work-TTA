@@ -435,8 +435,28 @@
 
 
 ##
-## Aggregating values with lists and tuples
+## Creating associative lists with dictionaries
 ##
+
+# def main():
+#     # d = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5 }
+#     # for k in sorted(d.keys()):
+#     #     print(k, d[k])
+#     d = dict(
+#         one = 1, two = 2, three = 3, four = 4, five = 'five'
+#     )
+#     d['seven'] = 7  # dict ionaries are mutable
+#     for k in sorted(d.keys()):
+#         print(k, d[k])
+#
+# if __name__ == "__main__": main()
+
+##
+## Finding the type and identity of a variable
+##
+
+
+
 
 
 
