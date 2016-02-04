@@ -455,8 +455,70 @@
 ## Finding the type and identity of a variable
 ##
 
-update
+# >>> x =  42
+# >>> x
+# 42
+# >>> id(x)
+# 1386935376
+# >>> id(42)
+# 1386935376
+# >>> id(x)
+# 1386935376
+# >>> y = 42
+# >>> x == y
+# True
+# >>> x is y
+# True
+# >>> x = dict(x = 42)
+# >>> {'x':42}
+# {'x': 42}
+# >>> type(x)
+# <class 'dict'>
+# >>> id(x)
+# 1596882536840
+# >>> y = dict( x = 42)
+# >>> id(y)
+# 1596882465672
+# >>> id(x)
+# 1596882536840
+# >>> y == x
+# True
+# >>> y is x
+# False
+# >>>
 
+##
+## Specifying logical values with True and False
+##
+
+# >>> a, b = 0, 1
+# >>> a == b
+# False
+# >>> a < b
+# True
+# >>> a > b
+# False
+# >>> a = True
+# >>> a
+# True
+# >>> type(a)
+# <class 'bool'>
+# >>> id(a)
+# 1386679984
+# >>> b = True
+# >>> id(b)
+# 1386679984
+# >>> id(True)
+# 1386679984
+# >>>
+
+##
+## 6. Conditionals
+##
+
+##
+## Selecting Code with if and else conditional statements
+##
 
 
 
