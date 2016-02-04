@@ -520,7 +520,19 @@
 ## Selecting Code with if and else conditional statements
 ##
 
+# def main():
+#     a, b = 0, 1
+#     if a < b:
+#         print('This is true')
+#     else:
+#         print('This is not true')
+#
+#
+# if __name__ == "__main__": main()
 
+##
+## Selecting Code with if and else conditional statements
+##
 
 
 ### Template
