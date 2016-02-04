@@ -531,8 +531,65 @@
 # if __name__ == "__main__": main()
 
 ##
-## Selecting Code with if and else conditional statements
+## Selecting multiple choice with elif
 ##
+
+# def main():
+#     v = 'seven'
+#     if v == 'one':
+#         print('v is one')
+#     elif v == 'two':
+#         print('v is two')
+#     elif v == 'three':
+#         print('v is three')
+#     else:  # catch all command in event all of above are not true
+#         print('v is someother thing')
+#
+#
+# if __name__ == "__main__": main()
+
+##
+## Understanding other strategies for muliptle choice
+##
+
+# Python does not have "switch" or "case" that allows to select from multiple choice of variable
+# Pythons way of doing it below
+
+# def main():
+#     choices = dict(
+#         one = 'first',
+#         two = 'second',
+#         three = 'third',
+#         four = 'fourth',
+#         five = 'fifth'
+#     )
+#     v = 'seven'
+#     print(choices.get(v, 'other'))
+#
+# if __name__ == "__main__": main()
+
+##
+## Using the conditional expression
+##
+
+# def main():
+#     a, b = 1, 1
+#     if a < b:
+#         v = 'This is true'
+#     else:
+#         v = 'This is not true'
+#     print(v)
+#
+# if __name__ == "__main__": main()
+
+# Easier way
+
+def main():
+    a, b = 1, 1
+    v = 'this is true' if a < b else 'this is not true'
+    print(v)
+
+if __name__ == "__main__": main()
 
 
 ### Template
