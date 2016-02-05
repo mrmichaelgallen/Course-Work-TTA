@@ -584,13 +584,63 @@
 
 # Easier way
 
+# def main():
+#     a, b = 1, 1
+#     v = 'this is true' if a < b else 'this is not true'
+#     print(v)
+#
+# if __name__ == "__main__": main()
+
+##
+## 7. Loops
+##
+
+##
+## Creating loops with while
+##
+
+# def main():
+#     # simple fibonacci series
+#     # the sum of two elements defines the next set
+#     a, b = 0, 1
+#     while b < 150:
+#         print(b, end=' ')
+#         a, b = b, a + b
+#
+# if __name__ == "__main__": main()
+
+##
+## Iterating with for
+##
+
+# #!/usr/bin/python3
+# # for.py by Bill Weinman [http://bw.org]
+# # This is an exercise file from Python 3 Essential Training lynda.com
+# # Copyright 2010 The BearHeart Group, LLC
+#
+# def main():
+#     for line in [1, 2, 3, 4, 5]:
+#         print(line, end=' ')
+#
+# if __name__ == "__main__": main()
+
+##
+## Enumerating iterators
+##
+
+# def main():
+#     fh = open('lines.txt')
+#     for index, line in enumerate(fh.readlines())
+#         print(index, line, end='')
+#
+# if __name__ == "__main__": main()
+
 def main():
-    a, b = 1, 1
-    v = 'this is true' if a < b else 'this is not true'
-    print(v)
+    s = 'this is a string'
+    for i, c in enumerate(s):
+        print(i, c)
 
 if __name__ == "__main__": main()
-
 
 ### Template
 
