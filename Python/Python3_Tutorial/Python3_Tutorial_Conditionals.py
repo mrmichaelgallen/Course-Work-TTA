@@ -635,14 +635,59 @@
 #
 # if __name__ == "__main__": main()
 
-def main():
-    s = 'this is a string'
-    for i, c in enumerate(s):
-        print(i, c)
+# def main():
+#     s = 'this is a string'
+#     for i, c in enumerate(s):
+#         # print(i, c)
+#         if c == 's': print('index {} is an s'.format(i))
+#
+# if __name__ == "__main__": main()
 
-if __name__ == "__main__": main()
+##
+## Controlling Loop Flow with break, continue, and else
+##
 
+# def main():
+#     s = 'this is a string'
+#     for c in s:
+#         # if c == 's': continue # skips all s characters
+#         # if c == 's': break # terminates the loop
+#         print(c, end='')
+#     else:   # Will do all the loop actions, once done, it will do the else
+#         print('else')
+#
+#
+# if __name__ == "__main__": main()
+
+# These controllers break, continue and else can be used in While loops
+
+# def main():
+#     s = 'this is a string'
+#     i = 0
+#     while(i < len(s)):
+#         print(s[i], end='')
+#         i += 1
+#     else:
+#         print('else')
+#
+# if __name__ == "__main__": main()
+
+##
+## 8. Operators
+##
+
+##
+## Performing simple arithmetic
+##
+
+
+
+
+
+
+###
 ### Template
+###
 
 # def main():
 #     print("This is the template")
