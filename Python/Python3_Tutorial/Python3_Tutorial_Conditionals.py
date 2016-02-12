@@ -1015,7 +1015,42 @@
 ## Learning how exceptions work
 ##
 
+# -Exceptions are the key method of handling errors in Python
+# -"try" something, then catch an exception with "except"
 
+# try:
+#     fh = open('filename')
+# except IOError as e:
+#     print(e)
+# else:
+#     for | in fh:print(|)
+
+# You may raise your own exceptions with "raise"
+
+##
+## Handling exceptions
+##
+
+# def main():
+#     fh = open('lines.txt')
+#     for line in fh: print(line.strip())
+#
+# if __name__ == "__main__": main()
+
+# Exmpale of try and catch
+# def main():
+#     try:
+#         fh = open('lines.txt')
+#     except:
+#         print('could not open the file. come back in 2000 years')
+#     else:
+#         for line in fh: print(line.strip())
+#
+# if __name__ == "__main__": main()
+
+##
+## Raising exceptions
+##
 
 
 
