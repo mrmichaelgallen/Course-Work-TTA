@@ -1076,7 +1076,100 @@
 ## Defining functions
 ##
 
+# def main():
+#     testfunc(42)
+#
+# def testfunc(number):
+#     print('This is a test function', number)
+#
+# if __name__ == "__main__": main()
 
+# def main():
+#     testfunc(42, 43, 75)
+#
+# def testfunc(number, another, onemore):
+#     print('This is a test function', number, another, onemore)
+#
+# if __name__ == "__main__": main()
+
+# You can set default values that will deploy if no arguments are provided. This keeps the code working
+# You don't have to have a value, use None like below as well. It is special value you can test for.
+# def main():
+#     testfunc(42, 43, 75)
+#
+# def testfunc(number, another = None, onemore = 0):
+#     print('This is a test function', number, another, onemore)
+#
+# if __name__ == "__main__": main()
+
+# You can uss pass to be a filler/placeholder for a function to keep an error from generating
+
+# def main():
+#     testfunc()
+#
+# def testfunc():
+#     pass
+#
+# if __name__ == "__main__": main()
+
+
+##
+## Using lists in arguments
+##
+
+# def main():
+#     testfunc(1, 2, 3, 42, 43, 45, 46)
+#
+# def testfunc(this, that, other, *args):
+#     print(this, that, other)
+#     for n in args: print(n, end=' ')
+#
+# if __name__ == "__main__": main()
+
+##
+## Using named function arguments
+##
+
+# kwargs = Keyword Arguments
+
+# def main():
+#     testfunc(one = 1, two = 2, four = 42)
+#
+# def testfunc(**kwargs):
+#     print('This is is a test function', kwargs['one'], kwargs['two'], kwargs['four'])
+#
+# if __name__ == "__main__": main()
+
+# The only rule for arguments and calling them is that they are in the same order, but any combination there of is ok
+
+# def main():
+#     testfunc(5, 6, 7, 8, 9, 10, one = 1, two = 2, four = 42)
+#
+# def testfunc(this, that, other, *args, **kwargs):
+#     print('This is is a test function',
+#           this, that, other, args,
+#           kwargs['one'], kwargs['two'], kwargs['four'])
+#
+# if __name__ == "__main__": main()
+
+##
+## Returning values from functions
+##
+
+# The keyword return returns any type/object
+
+# def main():
+#     for n in testfunc(): print(n, end=' ')
+#
+# def testfunc():
+#     #return 'This is a test function'
+#     return range(25)
+#
+# if __name__ == "__main__": main()
+
+##
+## Creating a sequence with a generator function
+##
 
 
 
@@ -1085,7 +1178,7 @@
 ###
 
 # def main():
-#     print("This is the template")
+#     print('This is is a test function')
 #
 #
 # if __name__ == "__main__": main()
