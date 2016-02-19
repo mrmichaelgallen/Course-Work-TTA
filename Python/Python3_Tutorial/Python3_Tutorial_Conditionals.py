@@ -1257,23 +1257,198 @@
 ## Using Object Data
 ##
 
-class Duck:
-    def __init__(self, color = 'white'):
-        self._color = color
+# class Duck:
+#     def __init__(self, color = 'white'):
+#         self._color = color
+#
+#
+#     def quack(self):
+#         print('Quaaack!')
+#
+#     def walk(self):
+#         print('walk like a duck.')
+#
+# def main():
+#     donald = Duck()
+#     donald.quack()
+#     donald.walk()
+#
+# if __name__ == "__main__": main()
+
+##
+## Understanding Inheritance
+##
+
+# class Animal:
+#     def talk(self): print('I have something to say!')
+#     def walk(self): print('Hey! I''m walkin'' here!')
+#     def clothes(self): print('I have nice clothes')
+#
+# class Duck(Animal):
+#     def quack(self):
+#         print('Quaaack!')
+#
+#     def walk(self):
+#         super().walk() # super() tells it to add in the parent def
+#         print('walk like a duck.')
+#
+# class Dog(Animal):
+#     def clothes(self):
+#         print('I have brown and white fur')
+#
+# def main():
+#     donald = Duck()
+#     donald.quack()
+#     donald.walk()
+#     donald.clothes()
+#
+#     fido = Dog()
+#     fido.walk()
+#     fido.clothes()
+#
+#
+# if __name__ == "__main__": main()
+
+##
+## Applying polymorphism to classes
+##
+
+# class Duck():
+#     def quack(self):
+#         print('Quaaack!')
+#
+#     def walk(self):
+#         print('walk like a duck.')
+#
+#     def bark(self):
+#         print('The duck can not bark')
+#
+#     def fur(self):
+#         print('The duck has feathers')
+#
+# class Dog():
+#     def bark(self):
+#         print('Woof!')
+#
+#     def walk(self):
+#         print('Walks like a dog')
+#
+#     def fur(self):
+#         print('The dog has brown and white fur')
+#
+#     def quack(self):
+#         print('Dog can not quack')
+#
+# def main():
+#     donald = Duck()
+#     fido = Dog()
+#     in_the_forest(donald)
+#     in_the_pond(fido)
+#
+# def in_the_forest(dog):
+#     dog.bark()
+#     dog.fur()
+#
+# def in_the_pond(duck):
+#     duck.quack()
+#     duck.walk()
+#
+#     # for o in (donald, fido):
+#     #     o.quack()
+#     #     o.walk()
+#     #     o.bark()
+#     #     o.fur()
+#
+# if __name__ == "__main__": main()
+
+##
+## Using generator object in Python
+##
+
+# def main():
+#     o = range(0, 25, 1)
+#     for i in o: print(i, end=' ')
+#
+# if __name__ == "__main__": main()
+
+# class inclusive_range:
+#     def __init__(self, *args):
+#         numargs = len(args)
+#         if numargs < 1: raise TypeError('requires at least one argument')
+#         elif numargs == 1:
+#             self.stop = args[0]
+#             self.start = 0
+#             self.step = 1
+#         elif numargs == 2:
+#             (self.start, self.stop) = args
+#             self.step = 1
+#         elif numargs == 3:
+#             (self.start, self.stop, self.step) = args
+#         else: raise TypeError('inclusive_range expected at most three arguments, got {}.format(numargs)')
+#
+#     def __iter__(self):
+#         i = self.start
+#         while i <= self.stop:
+#             yield i
+#             i += self.step
+#
+# def main():
+#     #o = inclusive_range(25)
+#     #for i in o: print(i, end=' ')
+#     for i in inclusive_range(25): print(i, end=' ')
+#
+# if __name__ == "__main__": main()
+
+##
+## Using decorators
+##
+
+# Decorators are special functions that return other functions and they are used to modify the way that a function works
+
+# class Duck:
+#     def __init__(self, **kwargs):
+#         self.properties = kwargs
+#
+#     def quack(self):
+#         print('Quaaack!')
+#
+#     def walk(self):
+#         print('Walks like a duck')
+#
+#     def get_properties(self):
+#         return self.properties
+#
+#     def get_property(self, key):
+#         return self.properties.get(key, None)
+#
+#     @property # This is an accessor
+#     def color(self):
+#         return self.properties.get('color', None)
+#
+#     @color.setter
+#     def color(self, c):
+#         self.properties['color'] = c
+#
+#     @color.deleter
+#     def color(self):
+#         del self.properties['color']
+#
+# def main():
+#     donald = Duck()
+#     donald.color = 'orange'
+#     print(donald.get_property('color'))
+#
+# if __name__ == "__main__": main()
+
+##
+## 13. String Methods
+##
+
+##
+## Understanding strings as objects
+##
 
 
-    def quack(self):
-        print('Quaaack!')
-
-    def walk(self):
-        print('walk like a duck.')
-
-def main():
-    donald = Duck()
-    donald.quack()
-    donald.walk()
-
-if __name__ == "__main__": main()
 
 
 
