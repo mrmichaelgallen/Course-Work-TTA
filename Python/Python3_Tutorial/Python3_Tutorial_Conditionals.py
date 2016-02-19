@@ -1171,6 +1171,110 @@
 ## Creating a sequence with a generator function
 ##
 
+# A generator function is a function that returns an iterator object.
+
+# def main():
+#     print('This is the function.py file.')
+#     for i in inclusive_range(0, 25, 1):
+#         print(i, end = ' ')
+#
+# def inclusive_range(start, stop, step):
+#     i = start
+#     while i <= stop:
+#         yield i
+#         i += step
+#
+# if __name__ == "__main__": main()
+
+# def main():
+#     print('This is the function.py file.')
+#     for i in inclusive_range(25):
+#         print(i, end = ' ')
+#
+# def inclusive_range(*args):
+#         numargs = len(args)
+#         if numargs < 1: raise TypeError('requires at least one argument')
+#         elif numargs == 1:
+#             stop = args[0]
+#             start = 0
+#             step = 1
+#         elif numargs == 2:
+#             (start, stop) = args
+#             step = 1
+#         elif numargs == 3:
+#             (start, stop, step) = args
+#         else: raise TypeError('inclusive_range expected at most three arguments, got {}.format(numargs)')
+#         i = start
+#         while i <= stop:
+#             yield i
+#             i += step
+#
+# if __name__ == "__main__": main()
+
+##
+## 12. Classes
+##
+
+##
+## Understanding classes and objects
+##
+
+# The classes themselves are the
+# blueprint for how an object is created.
+#
+# An object is an instance of a class.
+
+##
+## Using Methods
+##
+
+# Methods are functions, but within the object
+# (self) is reference to the object, not the class
+# Constructor __init__(self):
+
+
+# class Duck:
+#     def __init__(self, value):
+#         # print('constructor')
+#         self._v = value
+#     def quack(self):
+#         print('Quaaack!', self._v)
+#
+#     def walk(self):
+#         print('walk like a duck.', self._v)
+#
+# def main():
+#     donald = Duck(57)
+#     frank = Duck(115)
+#     donald.quack() # The empty parenthesis is as if donald was in them.
+#     donald.walk()
+#     frank.quack()
+#     frank.walk()
+#
+# if __name__ == "__main__": main()
+
+##
+## Using Object Data
+##
+
+class Duck:
+    def __init__(self, color = 'white'):
+        self._color = color
+
+
+    def quack(self):
+        print('Quaaack!')
+
+    def walk(self):
+        print('walk like a duck.')
+
+def main():
+    donald = Duck()
+    donald.quack()
+    donald.walk()
+
+if __name__ == "__main__": main()
+
 
 
 ###
