@@ -1448,8 +1448,163 @@
 ## Understanding strings as objects
 ##
 
+# >>> 'This is a string'
+# 'This is a string'
+# >>> s = 'This is a string'
+# >>> s
+# 'This is a string'
+# >>> s.upper()
+# 'THIS IS A STRING'
+# >>> 'This is a string'.upper()
+# 'THIS IS A STRING'
+# >>> 'I am not shouting'.upper()
+# 'I AM NOT SHOUTING'
+# >>>
+# >>> 'This is a string {}'.format(42)
+# 'This is a string 42'
+# >>> 'This is a string %d' % 42
+# 'This is a string 42'
 
+##
+## Working with common string methods
+##
 
+# >>> s = 'this is a string'
+# >>> s
+# 'this is a string'
+# >>> s.capitalize()
+# 'This is a string'
+# >>> s.upper()
+# 'THIS IS A STRING'
+# >>> s.lower()
+# 'this is a string'
+# >>> 'This is a string'.lower()
+# 'this is a string'
+# >>> 'This is A String'.swapcase()
+# 'tHIS IS a sTRING'
+# >>> s
+# 'this is a string'
+# >>> s.find('is')
+# 2
+# >>> s.replace('this', 'that')
+# 'that is a string'
+# >>> id(s)
+# 2725702671792
+# >>> newstring = s.upper()
+# >>> newstring
+# 'THIS IS A STRING'
+# >>> id(newstring)
+# 2725702720728
+# >>> s.strip()
+# 'this is a string'
+# >>> '    This is a string   '.strip()
+# 'This is a string'
+# >>> '    This is a string   '.rstrip()
+# '    This is a string'
+# >>> s1 = 'This is a string\n'
+# >>> s1
+# 'This is a string\n'
+# >>> s1.strip()
+# 'This is a string'
+# >>> s1.rstrip('\n')
+# 'This is a string'
+# >>> s.isalnum()
+# False
+# >>> 'string'.isalnum()
+# True
+# >>> 'thisisastring'.isalpha()
+# True
+# >>> 'thisisastring'.isdigit()
+# False
+# >>> s.isdigit()
+# False
+# >>> s.isprintable()
+# True
+
+##
+## Formatting strings with str.format
+##
+
+# >>> a, b = 5, 42
+# >>> print(a, b)
+# 5 42
+# >>> 'this is {}, that is {}'.format(a,b)
+# 'this is 5, that is 42'
+# >>> s = 'this is {}, that is {}'
+# >>> s
+# 'this is {}, that is {}'
+# >>> s.format(a, b)
+# 'this is 5, that is 42'
+# >>> id(s)
+# 2188063268128
+# >>> new = s.format(a,b)
+# >>> id(new)
+# 2188063268056
+# >>> # Format returns a new string
+# >>> 'this is %d, that is %d' % (a,b) # % symbol is obsolete way of doing it in Python
+# 'this is 5, that is 42'
+# >>> # Format is more powerful than %
+# >>> 'this is {}, that is {}'.format(b, a)
+# 'this is 42, that is 5'
+# >>> 'this is {1}, that is {0}'.format(a,b)
+# 'this is 42, that is 5'
+# >>> 'this is {1}, that is {0}, this is {1}'.format(a, b)
+# 'this is 42, that is 5, this is 42'
+# >>> 'this is {bob} and that is {fred}'.format( bob = a, fred = b)
+# 'this is 5 and that is 42'
+# >>> d = dict( bob = a, fred = b)
+# >>> 'this is {bob} and that is {fred}'.format(**d)
+# 'this is 5 and that is 42'
+
+##
+## Splitting and joining strings
+##
+
+# concatenation
+
+# >>> s = 'This is a string of words'
+# >>> s
+# 'This is a string of words'
+# >>> s.split()
+# ['This', 'is', 'a', 'string', 'of', 'words']
+# >>> 'This    is    a  string  of    words'.split()
+# ['This', 'is', 'a', 'string', 'of', 'words']
+# >>> # splits on white space
+# >>> s.split('i')
+# ['Th', 's ', 's a str', 'ng of words']
+# >>> words = s.split()
+# >>> words
+# ['This', 'is', 'a', 'string', 'of', 'words']
+# >>> for w in words: print(w)
+#
+# This
+# is
+# a
+# string
+# of
+# words
+# >>> new = ':'.join(words)
+# >>> new
+# 'This:is:a:string:of:words'
+# >>> ', '.join(words)
+# 'This, is, a, string, of, words'
+# >>> # Above is hwo you split and join strings in Pyton
+
+##
+## Finding and using standard string methods
+##
+
+# http://docs.python.org/py3k/library/stdtypes.html
+
+# >>> s = 'this is a string'
+# >>> s
+# 'this is a string'
+# >>> new = s.center(80)
+# >>> new
+# '                                this is a string                                '
+# >>> len(new)
+# 80
+# >>>
 
 
 ###
@@ -1461,3 +1616,21 @@
 #
 #
 # if __name__ == "__main__": main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
