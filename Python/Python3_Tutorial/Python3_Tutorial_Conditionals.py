@@ -1606,6 +1606,18 @@
 # 80
 # >>>
 
+##
+## 14. Containers
+##
+
+##
+## Creating sequences with tuples and lists
+##
+
+# tuples are immutable and lists are mutable.
+
+
+
 
 ###
 ### Template
