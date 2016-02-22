@@ -1616,6 +1616,279 @@
 
 # tuples are immutable and lists are mutable.
 
+# >>> t = 1,2,3,4,5
+# >>> t
+# (1, 2, 3, 4, 5)
+# >>> t[0]
+# 1
+# >>> t[4]
+# 5
+# >>> t[-1]
+# 5
+# >>> len(t)
+# 5
+# >>> min(t)
+# 1
+# >>> max(t)
+# 5
+# >>> t = (1,2,3,4,5)
+# >>> t
+# (1, 2, 3, 4, 5)
+# >>> t=(1)
+# >>> t
+# 1
+# >>> # It is the comma operator that creates the tuple. One item does not create a tuple, it creates an integer like above
+# >>> type(t)
+# <class 'int'>
+# >>> t = (t,) # this is how you create a tuple with one element
+# >>> t
+# (1,)
+# >>> type(t)
+# <class 'tuple'>
+# >>> x = [1,2,3,4,5] # You create lists with square brackets
+# >>> x
+# [1, 2, 3, 4, 5]
+# >>> type(x)
+# <class 'list'>
+# >>> x[0]
+# 1
+# >>> x[-1]
+# 5
+# >>> len(x)
+# 5
+# >>> min(x)
+# 1
+# >>> max(x)
+# 5
+# >>> # The benefit of lists is they are mutable (can be changed)
+# >>> t
+# (1,)
+# >>> t = tuple(range(25))
+# >>> t
+# (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24)
+# >>> type(t)
+# <class 'tuple'>
+# >>> t[10] = 42
+# Traceback (most recent call last):
+#   File "<pyshell#30>", line 1, in <module>
+#     t[10] = 42
+# TypeError: 'tuple' object does not support item assignment
+# >>> # Tuples are immutable (can not be changed)
+# >>> x = list(range(25))
+# >>> x
+# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+# >>> type(x)
+# <class 'list'>
+# >>> x[10] = 42
+# >>> x
+# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 42, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+# >>> # Use tuples when you need or want the data to be permament, so you won't accidentally change it. Default to using a tuple, unless a mutable list is needed.
+
+##
+## Operating on sequence with built-in methods
+##
+
+# Tuples and lists are powerfully and lots of operations you can perfrom on them
+
+# >>> t = tuple(range(25))
+# >>> t
+# (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24)
+# >>> type(t)
+# <class 'tuple'>
+# >>> 10 in t
+# True
+# >>> 50 in t
+# False
+# >>> 50 not in t
+# True
+# >>> t[10]
+# 10
+# >>> len(t)
+# 25
+# >>> for i in t: print(i)
+#
+# 0
+# 1
+# 2
+# 3
+# 4
+# 5
+# 6
+# 7
+# 8
+# 9
+# 10
+# 11
+# 12
+# 13
+# 14
+# 15
+# 16
+# 17
+# 18
+# 19
+# 20
+# 21
+# 22
+# 23
+# 24
+# >>> x = list(range(20))
+# >>> x
+# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+# >>> 10 in x
+# True
+# >>> 20 in x
+# False
+# >>> for i in x: print(i)
+#
+# 0
+# 1
+# 2
+# 3
+# 4
+# 5
+# 6
+# 7
+# 8
+# 9
+# 10
+# 11
+# 12
+# 13
+# 14
+# 15
+# 16
+# 17
+# 18
+# 19
+# >>> t[10] = 25
+# Traceback (most recent call last):
+#   File "<pyshell#16>", line 1, in <module>
+#     t[10] = 25
+# TypeError: 'tuple' object does not support item assignment
+# >>> x[10] = 25
+# >>>
+# >>> x
+# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 25, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+# >>> t.count(5)
+# 1
+# >>> t.index(5)
+# 5
+# >>> t
+# (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24)
+# >>> t.append(100)
+# Traceback (most recent call last):
+#   File "<pyshell#23>", line 1, in <module>
+#     t.append(100)
+# AttributeError: 'tuple' object has no attribute 'append'
+# >>> x
+# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 25, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+# >>> x.append(100)
+# >>> x
+# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 25, 11, 12, 13, 14, 15, 16, 17, 18, 19, 100]
+# >>> len(x)
+# 21
+# >>> x.extend(range(20))
+# >>> x
+# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 25, 11, 12, 13, 14, 15, 16, 17, 18, 19, 100, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+# >>> x.insert(0, 25)
+# >>> x
+# [25, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 25, 11, 12, 13, 14, 15, 16, 17, 18, 19, 100, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+# >>> x.insert(12, 100)
+# >>> x
+# [25, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 25, 100, 11, 12, 13, 14, 15, 16, 17, 18, 19, 100, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+# >>> x.remove(12)
+# >>> x
+# [25, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 25, 100, 11, 13, 14, 15, 16, 17, 18, 19, 100, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+# >>> # remove will go and find '12' and remove like above, where del will delete the 12 item in the list
+# >>> del x[12]
+# >>> x
+# [25, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 25, 11, 13, 14, 15, 16, 17, 18, 19, 100, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+# >>> # 100 has been delete
+# >>> x.pop()
+# 19
+# >>> x
+# [25, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 25, 11, 13, 14, 15, 16, 17, 18, 19, 100, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+# >>> # The 19 was removed
+# >>> x.pop(0)
+# 25
+# >>> x
+# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 25, 11, 13, 14, 15, 16, 17, 18, 19, 100, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+# >>> # the 25 has now been removed from the list
+# >>> # List can push, pop, insert, remove, del, based on index, search, count occurances, which is not available in Tuples
+
+##
+## Organizing data with dictionaries
+##
+
+# Dictionaries are Python's version of associative arrays or hashed arrays.
+
+# >>> d = {'one': 1, 'two': 2, 'three': 3,}
+# >>> d
+# {'two': 2, 'three': 3, 'one': 1}
+# >>> # Using the constructor, here is an easier to create a dictionary above because it offers more value
+# >>> # and easier to type
+# >>> d = dict( one = 1, two = 2, three = 3)
+# >>> d
+# {'two': 2, 'three': 3, 'one': 1}
+# >>> type(d)
+# <class 'dict'>
+# >>> x = dict( four = 4, five = 5, six = 6 )
+# >>> x
+# {'four': 4, 'five': 5, 'six': 6}
+# >>> d = dict( one = 1, two = 2, three = 3, **x )
+# >>> d
+# {'one': 1, 'five': 5, 'three': 3, 'two': 2, 'four': 4, 'six': 6}
+# >>> # Note, Dictionaries due not put the values in any given order
+# >>> 'four' in x
+# True
+# >>> 'three' in x
+# False
+# >>> for k in d: print(k)
+#
+# one
+# five
+# three
+# two
+# four
+# six
+# >>> for k, v in d.items(): print(k, v)
+#
+# one 1
+# five 5
+# three 3
+# two 2
+# four 4
+# six 6
+# >>> d['three']
+# 3
+# >>> x['three']
+# Traceback (most recent call last):
+#   File "<pyshell#19>", line 1, in <module>
+#     x['three']
+# KeyError: 'three'
+# >>> x.get('three')
+# >>> d.get('three')
+# 3
+# >>> x.get('three', 'not found')
+# 'not found'
+# >>> x
+# {'four': 4, 'five': 5, 'six': 6}
+# >>> del x['four']
+# >>> x
+# {'five': 5, 'six': 6}
+# >>> x.pop('five')
+# 5
+# >>> x
+# {'six': 6}
+# >>> # this allow you to create your own named spaces and organize them
+# >>> # you can store dictionaries within dictionaries
+
+##
+## Operating on charachter data with bytes and byte arrays
+##
+
+
 
 
 
