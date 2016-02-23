@@ -1888,7 +1888,24 @@
 ## Operating on charachter data with bytes and byte arrays
 ##
 
+# often used for converting strings
+# Do not have the file with characters
 
+def main():
+    fin = open('utf8.txt', 'r', encoding = 'utf_8') # utf_8 tells Python to ignore default encoder and decode the file
+    fout = open('utf8.html', 'w')
+    outbytes = bytearray()
+    for line in fin:
+        for c in line:
+            if ord(c) > 127:
+                outbytes += bytes('&#{:04d};'.format(ord(c)), encoding = 'utf_8')
+            else: outbytes.append(ord(c))
+    outstr = str(outbytes, encoding='utf_8')
+    print(outstr,  file = fout)
+    print(outstr)
+    print('Done.')
+
+if __name__ == "__main__": main()
 
 
 
@@ -1901,6 +1918,7 @@
 #
 #
 # if __name__ == "__main__": main()
+
 
 
 
