@@ -1936,19 +1936,43 @@
 #
 # if __name__ == "__main__": main()
 
+# def main():
+#     buffersize = 50000
+#     infile = open('bigfile.txt', 'r')
+#     outfile = open('bigfile_new.txt', 'w')
+#     buffer = infile.read(buffersize)
+#     while len(buffer):
+#         outfile.write(buffer)
+#         print('.', end ='')
+#         buffer = infile.read(buffersize)
+#     print() # prints a blank line
+#     print('Done.')
+#
+# if __name__ == "__main__": main()
+
+##
+## Reading and writing binary files
+##
+
+# how to write images and binary files
+
 def main():
     buffersize = 50000
-    infile = open('bigfile.txt', 'r')
-    outfile = open('bigfile_new.txt', 'w')
-    buffer = infile.read(buffersize)
+    infile = open('olives.jpg', 'rb') # rb = read binary
+    outfile - open('new.jpg', 'wb') # wb = write binary
+    buffer = infile.read(buffersize) # .read(buffersize) is not iterable
     while len(buffer):
         outfile.write(buffer)
-        print('.', end ='')
-        buffer = infile.read(buffersize)
-    print() # prints a blank line
+        print('.', end = '')
+        buffer = infile.read(buffer)
+    print()
     print('Done.')
 
 if __name__ == "__main__": main()
+
+##
+## 16. Database
+##
 
 
 
