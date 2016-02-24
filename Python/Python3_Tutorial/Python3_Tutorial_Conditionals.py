@@ -1891,18 +1891,61 @@
 # often used for converting strings
 # Do not have the file with characters
 
+
+# def main():
+#     fin = open('utf8.txt', 'r', encoding = 'utf_8') # utf_8 tells Python to ignore default encoder and decode the file
+#     fout = open('utf8.html', 'w')
+#     outbytes = bytearray()  # bytearrays are mutable
+#     for line in fin:
+#         for c in line:
+#             if ord(c) > 127:
+#                 outbytes += bytes('&#{:04d};'.format(ord(c)), encoding = 'utf_8')
+#             else: outbytes.append(ord(c))
+#     outstr = str(outbytes, encoding='utf_8')
+#     print(outstr,  file = fout)
+#     print(outstr)
+#     print('Done.')
+#
+# if __name__ == "__main__": main()
+
+##
+## 15. File I/O
+##
+
+##
+## Opening files
+##
+
+# def main():
+#     f = open('lines.txt', 'r') # Write arguments r=read(default) w=write a=append  modifiers to R r+ = read/write  rt=text file mode or rb=binary mode
+#     for line in f: # you can also use a method .readlines() which reads the line of text
+#         print(line, end='')
+#
+# if __name__ == "__main__": main()
+
+##
+## Reading and writing text files
+##
+
+# def main():
+#     infile = open('lines.txt', 'r')
+#     outfile = open('new.text', 'w')
+#     for line in infile:
+#         print(line, file = outfile, end='')
+#     print('Done.')
+#
+# if __name__ == "__main__": main()
+
 def main():
-    fin = open('utf8.txt', 'r', encoding = 'utf_8') # utf_8 tells Python to ignore default encoder and decode the file
-    fout = open('utf8.html', 'w')
-    outbytes = bytearray()
-    for line in fin:
-        for c in line:
-            if ord(c) > 127:
-                outbytes += bytes('&#{:04d};'.format(ord(c)), encoding = 'utf_8')
-            else: outbytes.append(ord(c))
-    outstr = str(outbytes, encoding='utf_8')
-    print(outstr,  file = fout)
-    print(outstr)
+    buffersize = 50000
+    infile = open('bigfile.txt', 'r')
+    outfile = open('bigfile_new.txt', 'w')
+    buffer = infile.read(buffersize)
+    while len(buffer):
+        outfile.write(buffer)
+        print('.', end ='')
+        buffer = infile.read(buffersize)
+    print() # prints a blank line
     print('Done.')
 
 if __name__ == "__main__": main()
