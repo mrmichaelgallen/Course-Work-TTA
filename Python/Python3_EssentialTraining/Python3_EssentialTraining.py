@@ -308,7 +308,7 @@
 #
 # if __name__ == "__main__": main()
 
-## Conditional Expressions
+## Conditional Expressions Test
 # def main():
 #     a, b = 1, 1
 #     s = "Less than" if a < b else "not less than"
