@@ -2227,7 +2227,32 @@
 ## Dealing with syntax errors
 ##
 
+# Need to have patience
 
+##
+## Dealing with runtime errors
+##
+
+# follow the execution path. Be patience to find error
+
+##
+## Dealing with logical errors
+##
+
+# This is when coders write the code out of logical order for the computer to run it.
+
+##
+## Using unit tests
+##
+
+# Python includes a unit test module
+# If you submit modules to PyPI you must submit them with unit testing
+
+##
+## 19. Building a Database Application
+##
+
+# bwBD.py #
 
 
 
