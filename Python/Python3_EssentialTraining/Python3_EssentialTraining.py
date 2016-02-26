@@ -49,7 +49,7 @@
 #
 # for n in range(1, 30):
 #     isprime(n)
-
+ 
 ##
 ## Creating sequence with generator functions
 ##
