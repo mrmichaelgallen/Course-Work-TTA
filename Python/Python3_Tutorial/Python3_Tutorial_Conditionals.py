@@ -2252,9 +2252,26 @@
 ## 19. Building a Database Application
 ##
 
+##
+## Normalizing a database interface
+##
+
 # bwBD.py #
 
+##
+## Deconstructing a database application
+##
 
+# db.py
+
+
+##
+## Displaying random entries from a database
+##
+
+# Testimonials.py
+
+# Bill Weinman
 
 ###
 ### Template
