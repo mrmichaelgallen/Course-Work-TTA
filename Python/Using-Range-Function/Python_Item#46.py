@@ -6,8 +6,6 @@ Type "copyright", "credits" or "license()" for more information.
 1
 2
 3
->>> for item in list(range(3, -1, -3)) print(item)
-SyntaxError: invalid syntax
 >>> for item in list(range(3, -1, -1)): print(item)
 
 3
