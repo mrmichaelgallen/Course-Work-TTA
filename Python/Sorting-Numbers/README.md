@@ -12,3 +12,5 @@ Reviewed Python.org documentation and built. Also, outside of the drill, I added
 #### Results
 
 Got all drill to work. I learned about using the builtin sort function in Python as well as using the format.
+
+Move to Portfolio simple Python Drills
