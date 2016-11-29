@@ -1,4 +1,4 @@
-### Python - Sorting Numbers Drill
+### Python - Create a Sort Method without using built-in sort() Drill
 ***
 
 #### Objective
